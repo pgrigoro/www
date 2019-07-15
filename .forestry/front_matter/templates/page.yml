@@ -10,9 +10,6 @@ fields:
 - type: text
   name: keywords
   label: keywords
-- type: text
-  name: last_updated
-  label: last_updated
 - type: textarea
   name: summary
   label: summary
@@ -22,6 +19,44 @@ fields:
 - type: text
   name: permalink
   label: permalink
+  description: must end in .html
+  config:
+    required: true
 - type: text
   name: folder
   label: folder
+- name: last_updates
+  type: datetime
+  label: last_updates
+  description: ''
+  config:
+    required: false
+    date_format: MMMM D, YYYY
+    time_format: 
+    display_utc: false
+    export_format: MMMM D, YYYY @ HH:mm
+- name: tags
+  type: tag_list
+  default: []
+  label: tags
+- name: datatable
+  type: boolean
+  label: datatable
+  default: false
+- name: toc
+  type: boolean
+  label: toc
+  default: true
+- name: series
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - First Series
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: series
