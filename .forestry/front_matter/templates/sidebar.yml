@@ -1,0 +1,22 @@
+---
+label: sidebar
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: keywords
+  label: keywords
+- type: text
+  name: sidebar
+  label: sidebar
+- type: boolean
+  name: toc
+  label: toc
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: folder
+  label: folder
