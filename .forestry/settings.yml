@@ -4,23 +4,29 @@ auto_deploy: true
 admin_path: ''
 webhook_url: 
 sections:
+- type: jekyll-posts
+  label: Posts
+  create: all
+- type: jekyll-pages
+  label: Pages
+  create: all
+- type: heading
+  label: Series
+- type: directory
+  path: pages/nix
+  label: nix
+  create: all
+  match: "**/*"
+  templates:
+  - page
+- type: heading
+  label: Config
 - type: directory
   path: _data/sidebars
   label: Sidebars
   create: documents
   match: "**/*"
   new_doc_ext: yml
-- type: jekyll-pages
-  label: Pages
-  create: all
-- type: jekyll-posts
-  label: Posts
-  create: all
-- type: directory
-  path: _tooltips
-  label: Tooltips
-  create: all
-  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
