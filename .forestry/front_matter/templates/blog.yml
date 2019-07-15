@@ -1,17 +1,17 @@
 ---
-label: blog
+label: post
 hide_body: false
 fields:
 - name: title
   type: text
   config:
     required: false
-  label: Title
+  label: title
   hidden: false
 - name: tags
   type: tag_list
   default: []
-  label: Tags
+  label: tags
 - name: keywords
   type: textarea
   default: ''
@@ -20,5 +20,22 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: Keywords
+  label: keywords
   description: Comma & space separated
+- name: sidebar
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - home_sidebar
+    - mydoc_sidebar
+    - other
+    - product1_sidebar
+    - product2_sidebar
+    source:
+      type: simple
+      section: sidebars
+      file: 
+      path: 
+  label: sidebar
