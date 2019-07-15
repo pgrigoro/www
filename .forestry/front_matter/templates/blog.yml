@@ -22,14 +22,3 @@ fields:
       format: markdown
   label: Keywords
   description: Comma & space separated
-- name: last_updated
-  type: datetime
-  label: Last Updated
-  description: ''
-  config:
-    required: true
-    date_format: 
-    time_format: 
-    display_utc: false
-    export_format: MM/DD/YYYY
-  default: now
