@@ -27,10 +27,10 @@ sections:
   create: documents
   match: "**/*"
   new_doc_ext: yml
-upload_dir: uploads
-public_path: "/uploads"
-front_matter_path: ''
-use_front_matter_path: false
+upload_dir: foggyubiquity.com
+public_path: https://res.cloudinary.com/tayloredtechnology/image/upload/c_scale,w_auto:100,dpr_auto
+front_matter_path: https://res.cloudinary.com/tayloredtechnology/image/upload
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
