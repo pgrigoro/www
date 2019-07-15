@@ -32,7 +32,9 @@ layout: default
 
 </article>
 
+{% if page.comments %}
 {% include disqus.html %}
+{% endif %}
 
 {{site.data.alerts.hr_shaded}}
 
