@@ -54,3 +54,5 @@ fields:
     schema:
       format: markdown
   label: summary
+pages:
+- _posts/awareness-of-ubiquity-cyberspace-ether.md
