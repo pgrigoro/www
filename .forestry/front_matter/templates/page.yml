@@ -1,0 +1,25 @@
+---
+label: page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: keywords
+  label: keywords
+- type: text
+  name: last_updated
+  label: last_updated
+- type: textarea
+  name: summary
+  label: summary
+- type: text
+  name: sidebar
+  label: sidebar
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: folder
+  label: folder
