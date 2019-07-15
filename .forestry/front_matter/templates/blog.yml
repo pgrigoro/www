@@ -1,4 +1,35 @@
 ---
 label: blog
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+  hidden: false
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+- name: keywords
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Keywords
+  description: Comma & space separated
+- name: last_updated
+  type: datetime
+  label: Last Updated
+  description: ''
+  config:
+    required: true
+    date_format: 
+    time_format: 
+    display_utc: false
+    export_format: MM/DD/YYYY
+  default: now
