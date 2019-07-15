@@ -7,9 +7,6 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
-- type: jekyll-pages
-  label: Pages
-  create: all
 - type: heading
   label: Series
 - type: directory
@@ -20,7 +17,10 @@ sections:
   templates:
   - page
 - type: heading
-  label: Config
+  label: Globals
+- type: jekyll-pages
+  label: Pages
+  create: all
 - type: directory
   path: _data/sidebars
   label: Sidebars
