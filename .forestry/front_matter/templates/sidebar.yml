@@ -1,0 +1,46 @@
+---
+label: sidebar
+hide_body: true
+fields:
+- type: field_group_list
+  name: entries
+  label: entries
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: product
+    label: product
+  - type: number
+    name: version
+    label: version
+  - type: field_group_list
+    name: folders
+    label: folders
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: output
+      label: output
+    - type: text
+      name: type
+      label: type
+    - type: field_group_list
+      name: folderitems
+      label: folderitems
+      fields:
+      - type: text
+        name: title
+        label: title
+      - type: text
+        name: url
+        label: url
+      - type: text
+        name: output
+        label: output
+      - type: text
+        name: type
+        label: type
