@@ -10,8 +10,8 @@ sections:
 - type: heading
   label: Series
 - type: directory
-  path: pages/nix
-  label: nix
+  path: pages/nixos
+  label: NixOS
   create: all
   match: "**/*"
   templates:
