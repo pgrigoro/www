@@ -14,9 +14,6 @@ fields:
   name: summary
   label: summary
 - type: text
-  name: sidebar
-  label: sidebar
-- type: text
   name: permalink
   label: permalink
   description: must end in .html
