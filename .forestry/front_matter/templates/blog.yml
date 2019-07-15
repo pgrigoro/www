@@ -22,23 +22,6 @@ fields:
       format: markdown
   label: keywords
   description: Comma & space separated
-- name: sidebar
-  type: select
-  default: []
-  config:
-    required: false
-    options:
-    - home_sidebar
-    - mydoc_sidebar
-    - other
-    - product1_sidebar
-    - product2_sidebar
-    source:
-      type: simple
-      section: sidebars
-      file: 
-      path: 
-  label: sidebar
 - name: permalink
   type: text
   config:
