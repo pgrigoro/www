@@ -4,6 +4,12 @@ auto_deploy: true
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: _data/sidebars
+  label: Sidebars
+  create: documents
+  match: "**/*.yml"
+  new_doc_ext: ".yml"
 - type: jekyll-pages
   label: Pages
   create: all
