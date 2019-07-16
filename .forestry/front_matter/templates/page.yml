@@ -22,9 +22,9 @@ fields:
 - type: text
   name: folder
   label: folder
-- name: last_updates
+- name: last_updated
   type: datetime
-  label: last_updates
+  label: last_updated
   description: ''
   config:
     required: false
