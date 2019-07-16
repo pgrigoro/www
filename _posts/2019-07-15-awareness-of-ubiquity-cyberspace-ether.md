@@ -5,6 +5,7 @@ title: Awareness of Ubiquity / CyberSpace / Ether
 keywords: ''
 permalink: blog-awareness.html
 summary: ''
+last_updated: May 29, 2019 @ 00:00
 
 ---
 **Today is the first and the last**. The last day of existing entirely in the ether of cyberspace researching, developing and understanding the absolute edge of technolgy. The first day of bringing that life into the tangible, real existence of leaving footprints for others to follow.
