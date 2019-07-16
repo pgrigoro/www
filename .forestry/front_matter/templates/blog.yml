@@ -37,5 +37,16 @@ fields:
     schema:
       format: markdown
   label: summary
+- name: last_updated
+  type: datetime
+  label: last_updated
+  description: ''
+  config:
+    required: true
+    date_format: MMMM D, YYYY
+    time_format: 
+    display_utc: false
+    export_format: MMMM D, YYYY @ HH:mm
+  default: now
 pages:
 - _posts/2019-07-15-awareness-of-ubiquity-cyberspace-ether.md
