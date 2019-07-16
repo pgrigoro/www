@@ -27,11 +27,12 @@ fields:
   label: last_updated
   description: ''
   config:
-    required: false
+    required: true
     date_format: MMMM D, YYYY
     time_format: 
     display_utc: false
     export_format: MMMM D, YYYY @ HH:mm
+  default: now
 - name: tags
   type: tag_list
   default: []
