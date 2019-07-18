@@ -13,6 +13,9 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://www.foggyubiquity.com">Foggy Ubiquity</a>
+        <div class="navbar-item">
+          <input id="search-input" type="text" placeholder="Search docs">
+        </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -99,6 +102,10 @@ If you typed the URL of this page manually, please double check that you entered
   window.antora.pagePath = ''
 </script>
 <script src="/_/js/site.js"></script>
+<script src="/_/js/vendor/lunr.js"></script>
+<script src="/_/js/vendor/pako.min.js"></script>
+<script src="/_/js/vendor/search.js"></script>
+<script>antoraLunr.init("/_/../search_index.json.gz")</script>
 <script src="/_/js/vendor/highlight.js"></script>
 <script>hljs.initHighlighting()</script>
   </body>

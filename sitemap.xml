@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://www.foggyubiquity.com/blog/containers/index.html</loc>
-<lastmod>2019-07-18T13:47:38.529Z</lastmod>
+<lastmod>2019-07-18T14:05:10.836Z</lastmod>
 </url>
 <url>
 <loc>http://www.foggyubiquity.com/blog/containers/signing-trust.html</loc>
-<lastmod>2019-07-18T13:47:38.529Z</lastmod>
+<lastmod>2019-07-18T14:05:10.836Z</lastmod>
 </url>
 <url>
 <loc>http://www.foggyubiquity.com/blog/index.html</loc>
-<lastmod>2019-07-18T13:47:38.529Z</lastmod>
+<lastmod>2019-07-18T14:05:10.836Z</lastmod>
+</url>
+<url>
+<loc>http://www.foggyubiquity.com/blog/kubernetes/index.html</loc>
+<lastmod>2019-07-18T14:05:10.836Z</lastmod>
 </url>
 </urlset>

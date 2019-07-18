@@ -16,6 +16,9 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="http://www.foggyubiquity.com">Foggy Ubiquity</a>
+        <div class="navbar-item">
+          <input id="search-input" type="text" placeholder="Search docs">
+        </div>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -80,6 +83,8 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../kubernetes/index.html">Kubernetes</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="http://www.keidrych.com">🔗 Author Info</a>
@@ -239,6 +244,10 @@
   window.antora.pagePath = '/blog/containers/signing-trust.html'
 </script>
 <script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/vendor/pako.min.js"></script>
+<script src="../../_/js/vendor/search.js"></script>
+<script>antoraLunr.init("../../_/../search_index.json.gz")</script>
 <script src="../../_/js/vendor/highlight.js"></script>
 <script>hljs.initHighlighting()</script>
   </body>
