@@ -4,11 +4,11 @@
   "description": "Public Website of Foggy Ubiquity",
   "main": "index.js",
   "scripts": {
-    "build": "cp override/generate-site.js node_modules/@antora/site-generator-default/lib/ && cross-env DOCSEARCH_ENABLED=true DOCSEARCH_ENGINE=lunr antora generate $TARGET",
+    "build": "rm -f supplemental/lunr/supplemental_ui/partials/header-content.hbs && cp override/generate-site.js node_modules/@antora/site-generator-default/lib/ && cross-env DOCSEARCH_ENABLED=true DOCSEARCH_ENGINE=lunr antora generate $TARGET",
     "dev": "cross-env TARGET=dev npm run build",
-    "self": "cross-env TARGET=self npm run build",
-    "deploy": "touch build/site/.nojekyll && git-directory-deploy --directory build/site/",
-    "watch": "npm-watch & serve"
+    "self": "antora --fetch self; cross-env TARGET=self npm run build",
+    "deploy": "rm -rf build && npm run self; touch build/site/.nojekyll && cp CNAME build/site/ && git-directory-deploy --directory build/site/",
+    "watch": "npm-watch & serve build/site/"
   },
   "repository": {
     "type": "git",
