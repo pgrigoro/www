@@ -1,0 +1,13 @@
+site:
+  title: Foggy Ubiquity
+  # the 404 page and sitemap files only get generated when the url property is set
+  url: http://www.foggyubiquity.com
+  start_page: blog::index.adoc
+content:
+  sources:
+  - url: git@github.com:foggyubiquity/www.git
+ui:
+  bundle:
+    url: https://github.com/foggyubiquity/www-ui/releases/download/0.1.0/ui-bundle.zip
+    snapshot: true
+  supplemental_files: ./supplemental/lunr/supplemental_ui

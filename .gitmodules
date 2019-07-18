@@ -1,0 +1,3 @@
+[submodule "supplemental/lunr"]
+	path = supplemental/lunr
+	url = git@github.com:Mogztter/antora-lunr.git

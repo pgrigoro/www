@@ -1,0 +1,39 @@
+{
+  "name": "www.foggyubiquity.com",
+  "version": "1.0.0",
+  "description": "Public Website of Foggy Ubiquity",
+  "main": "index.js",
+  "scripts": {
+    "build": "cp override/generate-site.js node_modules/@antora/site-generator-default/lib/ && cross-env DOCSEARCH_ENABLED=true DOCSEARCH_ENGINE=lunr antora generate $TARGET",
+    "dev": "cross-env TARGET=dev npm run build",
+    "self": "cross-env TARGET=self npm run build",
+    "deploy": "touch build/site/.nojekyll && git-directory-deploy --directory build/site/",
+    "watch": "npm-watch & serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foggyubiquity/www.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/foggyubiquity/www/issues"
+  },
+  "homepage": "https://github.com/foggyubiquity/www#readme",
+  "devDependencies": {
+    "@antora/cli": "2.0.0",
+    "@antora/site-generator-default": "2.0.0",
+    "antora-lunr": "0.4.0",
+    "cross-env": "5.2.0",
+    "git-directory-deploy": "1.5.1",
+    "npm-watch": "0.6.0",
+    "serve": "11.1.0"
+  },
+  "watch": {
+    "dev": {
+      "patterns": "../**/modules/**",
+      "extensions": "adoc",
+      "ignore": "node_modules"
+    }
+  }
+}
