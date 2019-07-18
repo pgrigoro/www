@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:5000/blog/containers/index.html</loc>
+<lastmod>2019-07-18T12:14:49.292Z</lastmod>
+</url>
+<url>
+<loc>http://localhost:5000/blog/containers/signing-trust.html</loc>
+<lastmod>2019-07-18T12:14:49.292Z</lastmod>
+</url>
+<url>
+<loc>http://localhost:5000/blog/index.html</loc>
+<lastmod>2019-07-18T12:14:49.292Z</lastmod>
+</url>
+</urlset>

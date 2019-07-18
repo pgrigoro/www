@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Container Signing &amp; Trust :: *DEVELOPMENT* Foggy Ubiquity *DEVELOPMENT*</title>
+    <link rel="canonical" href="http://localhost:5000/blog/containers/signing-trust.html">
+    <meta name="description" content="DockerHub provides a lesser known feature for Container Image Signing via Notary, understand the practical and suitable use-cases of this technology over standard unsigned containers.">
+    <meta name="keywords" content="docker, signing, container">
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/search.css">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://localhost:5000">*DEVELOPMENT* Foggy Ubiquity *DEVELOPMENT*</a>
+        <div class="navbar-item">
+          <input id="search-input" type="text" placeholder="Search docs">
+        </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Resources</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Resource A</a>
+            <a class="navbar-item" href="#">Resource B</a>
+            <a class="navbar-item" href="#">Resource C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="blog" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Blog</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Latest Digitizations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#">signing-trust.adoc</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="http://www.keidrych.com">🔗 Author Info</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Blog</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Blog</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main role="main">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Blog</a></li>
+    <li><a href="signing-trust.html">Container Signing &amp; Trust</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/keidrych/src/github.com/foggyubiquity/www/modules/ROOT/pages/containers/signing-trust.adoc">Edit this Page</a></div>
+</div>
+<article class="doc">
+<h1 class="page">Container Signing &amp; Trust</h1>
+<div class="sect1">
+<h2 id="_situational_awareness"><a class="anchor" href="#_situational_awareness"></a>Situational Awareness</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As technology re-invents itself in the ether, we re-encounter situations that previously well-working solutions were provided for. One such situation is Signing of Containers.</p>
+</div>
+<div class="sect2">
+<h3 id="_concept"><a class="anchor" href="#_concept"></a>Concept</h3>
+<div class="paragraph">
+<p>Signing of work has been around for eons. Artists sign their crafter masterpieces, and developers using any version control system attach their name on each commit. We <em>trust</em> these names as we have not been given a reson not to. Unfortunately <em>trust</em> can often be misplaced and explioted with melicious actors.</p>
+</div>
+<div class="paragraph">
+<p>This previntion of exploitation requires proof that the person who claims to have authored something now proove undeniably that their work is indeed their own and not anothers masquerading as theirs. In CyberSpace we use GnuPG keys (or alternative key implementation) to sign code commits. A process that is rapidly becoming more mandatory than optional for developers due to the sensitivity of Personally Identifiable Information (PII) and PCI regulations.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_extending_signing_to_containers"><a class="anchor" href="#_extending_signing_to_containers"></a>Extending Signing to Containers</h3>
+<div class="paragraph">
+<p>If individual code commits are capable of being signed against a person, then shouldn&#8217;t the aggregation of code be signed against a team, and each piece of the operating system signed to form a complete picture?</p>
+</div>
+<div class="paragraph">
+<p>The aforementioned question instantly shows the challenges in sucessful signing. The very concept requires that everything be atomically signed so the aggregated piece can be signed. Granted some Linux systems are trying to move this way, but only for core functionality as the thousands of individual components of often unsigned or haven&#8217;t needed to be updated as they are trusted for years.</p>
+</div>
+<div class="paragraph">
+<p>Containers being operating systems running within a host operating system introduce an interesting complexity to the equation. As they are a snapshot in time, can&#8217;t we just sign this snapshot as secure and move on. Unfortunately not, as again all parts of the tree assembling the container may not be signed, or trusted. This doesn&#8217;t mean we shouldn&#8217;t sign containers, just to understand we cannot assume just because something is signed it should be trusted. <a href="#">containers/cerfification.adoc</a> exists for the very reason of building trust that the image is safe.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_approach_to_signing_containers"><a class="anchor" href="#_approach_to_signing_containers"></a>Approach to Signing Containers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Signing Containers, or what is also called <em>Content Trust</em> is not supported by all Container Image Repositories, and for good reason. Its hard to implement with the only successful trust implementation being <a href="#_notary_survival_guide">Notary Survival Guide</a> via <em>The Update Framework</em>. Its also risky. Root keys must be generated, and repository independent keys and user delegations managed carefully. A mistake, and Notary will lock out the repository name from trust.</p>
+</div>
+<div class="paragraph">
+<p>There&#8217;s also the small matter of <em>hashing</em>. Most humans are comfortable grabbing the latest image via a known standard such as <a href="https://semver.org/">SemVer</a> but comparing hashes for container versions against timestamps to know which is the latest is challenging and problematic for late night workers.</p>
+</div>
+<div class="paragraph">
+<p>Finally repositories must be created and signed appropriated before images can be pushed to them (working against most CI workflows for new applications)</p>
+</div>
+<div class="paragraph">
+<p>These risks and complexities don&#8217;t offset the benefits of security or verifying the container is exactly the one you wanted. They just paint a picture as to why <em>Container Signing</em> is slow on the uptake.</p>
+</div>
+<div class="paragraph">
+<p>The final influencing factor is the generic assumption that all containers are the same, or built with a common purpose. In point of fact, they aren&#8217;t. While the vast majority of containers are built for applications, Many exist as supporting Operating System Services.</p>
+</div>
+<div class="sect2">
+<h3 id="_application_vs_operating_system_containers"><a class="anchor" href="#_application_vs_operating_system_containers"></a>Application vs Operating System Containers</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Application Containers</strong>: are what developers are familiar with, write some code following a (hopefully) MicroService specification, push it through a Continous Integration (CI) pipeline and bundle into a Container that will run anywhere.</p>
+</li>
+<li>
+<p><strong>Operating System Containers</strong>: provide dedicated services for assembling a Host Operating System to run, well, containers. <a href="https://github.com/linuxkit/linuxkit">LinuxKit</a> is an excellent example of using Operating System Containers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There&#8217;s a significant degree of trust difference between the two situations. While Applications are assumed and often verified as secure and safe, Operating Systems are <strong>expected</strong> to be safe and trusted.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_when_to_sign_containers"><a class="anchor" href="#_when_to_sign_containers"></a>When to Sign Containers</h3>
+<div class="paragraph">
+<p>Spefically when used in the assembly of Operating Systems, for all other situations Container Signing adds a lot of overhead for very little benefit over Code Signing. Again <a href="#">containers/certification.adoc</a> should be pursued instead of Signing for Application Containers to promote trust and safety in images.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_supporting_services"><a class="anchor" href="#_supporting_services"></a>Supporting Services</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://goharbor.io/docs/">Harbor</a>: self hosted, Kubernetes compatible solution</p>
+</li>
+<li>
+<p><a href="https://hub.docker.com/">DockerHub</a>: cloud based, largest container repository in existance</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_notary_survival_guide"><a class="anchor" href="#_notary_survival_guide"></a>Notary Survival Guide</h2>
+<div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Definition</strong>: Notary is a tool for publishing and managing trusted collections of content. Publishers can digitally sign collections and consumers can verify integrity and origin of content. This ability is built on a straightforward key management and signing interface to create signed collections and configure trusted publishers.</p>
+</div>
+<div class="paragraph">
+<p>With Notary anyone can provide trust over arbitrary collections of data. Using The Update Framework (TUF) as the underlying security framework, Notary takes care of the operations necessary to create, manage, and distribute the metadata necessary to ensure the integrity and freshness of your content. <a href="https://docs.docker.com/notary/getting_started/">Docker&#8217;s Notary Explanation</a></p>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sh hljs" data-lang="sh"></code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script type="text/javascript">
+  window.antora = window.antora || {}
+  window.antora.basePath = '../..'
+  window.antora.pagePath = '/blog/containers/signing-trust.html'
+</script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/vendor/pako.min.js"></script>
+<script src="../../_/js/vendor/search.js"></script>
+<script>antoraLunr.init("../../_/../search_index.json.gz")</script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>
