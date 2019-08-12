@@ -4,11 +4,11 @@
   "description": "Public Website of Foggy Ubiquity",
   "main": "index.js",
   "scripts": {
-    "build": "rm -f supplemental/lunr/supplemental_ui/partials/header-content.hbs && cp override/generate-site.js node_modules/@antora/site-generator-default/lib/ && cross-env DOCSEARCH_ENABLED=true DOCSEARCH_ENGINE=lunr antora generate $TARGET",
+    "build": "rm -f supplemental/lunr/supplemental_ui/partials/header-content.hbs && cp override/generate-site.js node_modules/@antora/site-generator-default/lib/ && cross-env DOCSEARCH_ENABLED=true DOCSEARCH_ENGINE=lunr antora generate $TARGET && mkdir -p build/site/slides && node slides.js",
     "dev": "cross-env TARGET=dev npm run build",
     "self": "antora --fetch self; cross-env TARGET=self npm run build",
     "deploy": "rm -rf build && npm run self; touch build/site/.nojekyll && cp CNAME build/site/ && git-directory-deploy --directory build/site/",
-    "watch": "npm-watch & serve build/site/"
+    "watch": "npm-watch"
   },
   "repository": {
     "type": "git",
@@ -25,15 +25,25 @@
     "@antora/site-generator-default": "2.0.0",
     "antora-lunr": "0.4.0",
     "cross-env": "5.2.0",
+    "fast-glob": "3.0.4",
     "git-directory-deploy": "1.5.1",
+    "node-dev": "4.0.0",
     "npm-watch": "0.6.0",
     "serve": "11.1.0"
   },
   "watch": {
     "dev": {
-      "patterns": "../**/modules/**",
+      "patterns": [
+        "../**/modules/**",
+        "slides/**"
+      ],
       "extensions": "adoc",
       "ignore": "node_modules"
     }
+  },
+  "dependencies": {
+    "asciidoctor": "2.0.3",
+    "asciidoctor-kroki": "0.2.0",
+    "asciidoctor-reveal.js": "2.0.0"
   }
 }

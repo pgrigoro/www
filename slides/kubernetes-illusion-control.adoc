@@ -1,0 +1,231 @@
+:author: Keidrych Anton-Oates <me@keidrych.com>
+:blog: http://www.foggyubiquity.com
+:description: Series of practical lessons learned from using Kubernetes since 2016
+:icons: font
+
+= Illusion Control: Kubernetes Redacted
+
+== Developer Driven Isolation
+
+** HyperVisor
+** User / Workspace
+** Application
+** LXC
+
+== HyperVisor Virtualization
+
+* Sandbox for programmers debugging and developing operating systems.
+* Allowed working without using all of the hardware’s resources.
+* Evolved into running multiple environments on one machine concurrently
+
+=== Type 1 HyperVisor
+
+* @1972 IBM CP-67 was referred to as CP/CMS.
+* CP Stands for Control Program, a program which created Virtual Machines.
+* CMS stands for Console Monitor System, a small single-user operating system designed to be interactive.
+
+=== Type 2 HyperVisor
+
+* July 1963 Massachusetts Institute of Technology (MIT) announced Project MAC.
+* MAC -> MultiCS (equal sharing) -> Unix.
+* January 1987, Insignia Solutions demonstrated a software emulator called SoftPC.
+* SoftPC allowed users to run Dos applications on their Unix workstations.
+* 1999 VMWare released VMWare Workstation.
+
+[.notes]
+--
+* A Type-1 HyperVisor is much more efficient than a Type-2 HyperVisor since it can be better optimized for virtualization, and does not require all the resources it takes to run a traditional operating system.
+--
+
+=== User / Workspace
+
+Unix is an example of Virtualization at the User or Workspace Level. Multiple users share the same CPU, Memory, Hard Disk, etc… pool of resources, but each has its own profile, separate from the other users on the system. first step towards application virtualization
+
+=== Application
+
+* 1990, Sun Microsystems began a project known as “Stealth”. {JAVA} 1996 released
+* the JRE compiles the software just before running, the developer does not need to worry about what operating system or hardware platform the end-user will run the application on;
+
+=== LXC
+
+* Logical Evolution of Type 2 Hypervisior + Application Virtulization
+* Whereas the JVM creates single isolated environment, containers are isolated environments
+
+[%conceal]
+=== LXC Image
+
+image::https://docs.microsoft.com/en-us/virtualization/windowscontainers/deploy-containers/media/docker-on-linux.png[ContainerD Architecture]
+
+== The Illusion
+
+* Personal sandpit
+* Flexibility to lego
+* Containers are Packages (RedHat)
+
+_Nirvana was to remove all distractions from our sandpit, no Ops, no Security... just Dev_
+
+== A new _Isolated_ Challenge
+
+[mermaid,isolation-from-reality,svg,role=sequence]
+....
+graph TD
+classDef dev fill:gold,color:black,stroke:LightSlateGray
+classDef sec fill:crimson,color:white,stroke:LightSlateGray
+classDef ops fill:slateblue,color:white,stroke:LightSlateGray
+
+sec(SECurity)
+dev(DEVelopment)
+ops(OPerationS)
+
+class dev dev;
+class sec sec;
+class ops ops;
+....
+
+=== Akido / Anti-Patterns Created
+
+* Dev & Ops Silos
+* Dev Don't Need Ops
+* Dev as Tools Team
+* Rebranded SysAdmin
+* Ops Embedded in Dev Team
+
+https://web.devopstopologies.com/[DevOps Topologies]
+
+[.notes]
+--
+* _Throw it over the wall_ DONE means ‘feature-complete’, but not working in Production)
+* naivety and arrogance, ops is replaced by the _cloud_
+* _become DevOps_ without loosing velocity, new tools can be beneficial but impact is lost
+* Hire DevOps, place in Ops and force to admin system
+* Most Critical part of IT devalued and treated as an annoyance, project / manager priority driven often contrary to organizational sustenance
+--
+
+== Operations (Defenders)
+
+Business as Usual...
+
+"IT Operations is responsible for the smooth functioning of the infrastructure and operational environments that support application deployment to internal and external customers, including the network infrastructure; server and device management; computer operations; IT infrastructure library (ITIL) management; and help desk services for an organization." -- https://joehertvik.com/operations-management/[Joe Hertvik]
+
+=== InfoSec: Blue Team
+
+* Defensive Security
+* Infrastructure Protection
+* Damage Control
+* Incident Response(s)
+* Operational Security
+* Threat Hunters
+* Digital Forensics
+
+== Security (Attackers)
+
+_Its Secure because its in a container..._
+
+video::https://video.twimg.com/ext_tw_video/1152510154690224128/pu/vid/480x480/oYjqaYHROVYkne8s.mp4[]
+https://twitter.com/SylvieLorxu/status/1152511215941369856[Sylvia van Os]
+
+=== Legacy Models:
+
+** Developers are able to deploy code 20x more frequently
+** Containers treated like language packages, grabbed and deployed
+
+[.notes]
+--
+* 1 * 14 * 2 deployments per day
+--
+
+=== Legacy Tools:
+
+** Explosion of WE Traffic
+** Containers & CGroups are _Black Boxes_
+** Shells are now malicious actors
+
+=== InfoSec: Red Team
+
+* Offensive Security
+* Ethical Hacking
+* Exploiting Vulnerabilities
+* Penetration Tests
+* Black Box Testing
+* Social Engineering
+* Web App Scanning
+
+== Development (The Builders)
+
+* Developers placed all _proverbial_ eggs in one basket
+* Security abandoned & viewed as noise to developers
+* Operations expected to run anything thrown at it
+* MicroServices & Functions can be replaced as desired
+* Ignorance is Bliss...
+
+=== InfoSec: Yellow Team
+
+* Software Builders
+* Application Developers
+* Software Engineers
+* System Architects
+
+== Collaboration via Container
+
+Containers encapsulate the deployment and runtime, and large portion of security requirements of software into an aggregated, common & mostly reproducible environment.
+
+[%conceal]
+=== Developer Illusion
+
+If debugging is the process of removing bugs, then programming is the process of putting bugs into the application. Testing only proves the presence of bugs, not the absence of them.
+
+=== Illusion
+
+____
+Yellow Builds it. Red Breaks it. Blue Defends it. Yellow Fixes it.
+____
+
+=== Reality
+
+____
+Yellow Builds it. Red Breaks it. Blue Complains about it. Yellow ignores it. Management hides it
+____
+
+image::https://hackernoon.com/hn-images/1*RBMkNgA_pgzZu0ArTyr4Xg.gif[Sir Are You Listening]
+https://hackernoon.com/introducing-the-infosec-colour-wheel-blending-developers-with-red-and-blue-security-teams-6437c1a07700[InfoSec Colour Wheel]
+
+=== Perceived Pain
+
+image::https://miro.medium.com/max/450/1*6DmMcht3u2xegun_0Ler4g.png[Pain of Kubernetes]
+
+=== Control
+
+Containers are https://linuxcontainers.org/lxcfs/introduction/[LXCFS] MicroOS' on Minimal HyperVisors.
+
+image::https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/84554048-135d-45bc-9a5b-0c8373dfd0a4/File/e8a0551d97202fca1bdf2d993f84a24a/untitled.png[KataContainers]
+
+== Kubernetes
+
+* Developers Drove Docker
+* Operations Drove Kubernetes
+* Security Drove HostOS Reform
+
+=== Illusion (Sort of)
+
+image::https://blog.newrelic.com/wp-content/uploads/Screen-Shot-2018-04-25-at-9.19.01-AM.jpg[Kubernetes Orchestration]
+
+=== What?
+
+"Kubernetes... eliminates the need for orchestration... (it) is comprised of a set of independent, composable control processes that continuously drive the current state towards the provided desired state" -- https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/[What is Kubernetes]
+
+=== Landscape
+
+image::https://landscape.cncf.io/images/landscape.png[CNCF Landscape]
+
+=== Architecture
+
+image::https://miro.medium.com/max/1500/1*vrezvX-hF7ZCzCOqJU2oQw.jpeg[Kubernetes 101]
+
+[%conceal]
+=== Application Dependency
+
+image::https://res.infoq.com/articles/kubernetes-effect/en/resources/fig1large-1517591489814.jpg[Application Dependency]
+
+=== Container Design Patterns
+
+image::https://res.infoq.com/articles/kubernetes-effect/en/resources/fig6large-1517591490109.jpg[Container Design Patterns]
