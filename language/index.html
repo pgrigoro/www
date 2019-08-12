@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Language of the Fog :: Foggy Ubiquity</title>
+    <link rel="canonical" href="http://www.foggyubiquity.com/language/index.html">
+    <meta name="description" content="Configuration &amp;amp; Continuous Delivery Meta Language">
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../_/css/site.css">
+<link rel="stylesheet" href="../_/css/search.css">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://www.foggyubiquity.com">Foggy Ubiquity</a>
+        <div class="navbar-item">
+          <input id="search-input" type="text" placeholder="Search docs">
+        </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/devsecops/" rel=canonical>Blog</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="/xaas/">XaaS</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="/xaas/kubernetes">Kubernetes</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="/devsecops/">DevSecOps</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="/devsecops/nixos">1. NixOS</a>
+            <a class="navbar-item" href="/devsecops/continuous-integration">2. Continuous Integration</a>
+            <a class="navbar-item" href="/devsecops/containers">3. Containers</a>
+            <a class="navbar-item" href="/devsecops/continuous-deployment">4. Continuous Deployment</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="/language/">Language</a>
+        <a class="navbar-item" href="http://www.keidrych.com/">Author 🔗</a>
+        <!--
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+        !-->
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="language" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Language</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">About</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="deployment-target/index.html">Deployment Targets</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="deployment-target/structure.html">Structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="software-system/index.html">Software System</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="software-system/structure.html">Structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="container/index.html">Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="container/structure.html">Structure</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Language</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">DevSecOps</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../devsecops/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Language</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">XaaS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../xaas/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main role="main">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../devsecops/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Language</a></li>
+    <li><a href="index.html">About</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/foggyubiquity/language/edit/master/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+</div>
+<article class="doc">
+<h1 class="page"><strong>Language</strong> of the Fog</h1>
+<div class="sect1">
+<h2 id="_situational_awareness"><a class="anchor" href="#_situational_awareness"></a>Situational Awareness</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Prior to the introduction of Object Oriented Programming, software development was focused on Data Flow &amp; Logic Programming, or what is also known as concurrent Functional or concurrent Imperative Programming. For those seeking to develop effective software in Fog or Distributed Cloud Computing (i.e. multiple public clouds). The embrace of Logic and smaller chunks of deployed software is critical.</p>
+</div>
+<div class="paragraph">
+<p>The challenge is management, where previously one Monolithic application could be deployed on a single Virtual Machine, now the same code-base is broken into tens of containers or hundreds of functions. As an industry, we have embraced this trend, continually pushing towards the hundreds of functions as evidenced in TOGAF, OSIMMv2, MicroService Architecture, and C4 Model to name a few.</p>
+</div>
+<div class="paragraph">
+<p>While the trend towards containerization and atomic functions is largely beneficial for development, the operational complexity increases exponentially, and the need for common approaches and standards for managing this complexity arise.</p>
+</div>
+<div class="paragraph">
+<p>Foggy Ubiquity was created as a vehicle for sharing a Configuration &amp; Continuous Delivery Meta Language maintained by <a href="http://keidrych.com">Keidrych Anton-Oates</a> originally crafted via collaboration with 3 Universities &amp; 35 Industry Publications as a way to address the looming complexity challenge of DevSecOps.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Foggy Ubiquity&#8217;s Language was originally authored: <strong>June 2017</strong>, with companies using the Kubernetes implementation in July 2017
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_architectural_compatibility"><a class="anchor" href="#_architectural_compatibility"></a>Architectural Compatibility</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is compatible with <a href="https://c4model.com/">C4 Model</a> architecture specification, which also means it can be dropped directly into the <a href="https://arc42.org/">Arc42</a> processes.</p>
+</div>
+<div class="paragraph">
+<p>The selection of C4 was not an easy decision. Ask any Enterprise Architect &amp; they can list of numerous software architecture patterns and standards. C4, however maintained the highest synergy and compatibility with Cloud &amp; Fog Computing at the time of original language authorship. One of the key goals of Foggy Ubiquity&#8217;s Language was to maintain compatibility with everyday discussion about DevSecOps. As such the <code>container</code> concept so closely aligning with <em>OCI Containers</em> became a much welcome enabler for Development Security and Operations when using Foggy Ubiquity.</p>
+</div>
+<div class="paragraph">
+<p>CA Technologies Parallel Decomposition approach naturally integrates with Foggy Ubiquity, C4 Model &amp; Arc42.</p>
+</div>
+<div class="paragraph">
+<p>Should your software development approach follow a different architecture, Foggy Ubiquity&#8217;s Language is still relevant and suitable, as the concepts transcend any specific specification.</p>
+</div>
+<div class="paragraph">
+<p><strong>Summary of Architecture Equivalence</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C4 Model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MicroService</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TOGAF / OSIMMv2</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Software System</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Suite of Services</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Group</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Container</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MicroService</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Component</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NanoService / Function</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Function</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_why_not_use_xaas"><a class="anchor" href="#_why_not_use_xaas"></a>Why not use XaaS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>CloudFoundry, Kubernetes, MesoSphere, Docker Swarm, and number other Infrastructure, Container, Function, &amp; Flow Programming implementations exist today, and the number will not get smaller over time. But <strong>none</strong> of them are cross-compatible by design.</p>
+</div>
+<div class="paragraph">
+<p>Some poignant thoughts about this:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>shouldn&#8217;t you choose how and where your code executes?</p>
+</li>
+<li>
+<p>What if today you wanted to move 100,000 Serverless Functions from one XaaS to another?</p>
+</li>
+<li>
+<p>How long would that actually take to reconfigure and support the new XaaS specification?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Even moving from a 12 month old Kubernetes implementation to the latest can result in significant time-sink due to the API&#8217;s migrating and defaults drifting over time.</p>
+</div>
+<div class="paragraph">
+<p>By providing a Configuration &amp; Continuous Delivery Meta Language, any company&#8217;s ability to move between providers on demand is restrained only by the providers implementation of this language. Or one configuration approach to rule them all.</p>
+</div>
+<div class="paragraph">
+<p>OSIMMv2 paints a picture of 7 Organizational maturity layers, from 3 foundational to layer 7, nirvana or totally Serverless / Function driven. It also demonstrates that moving between any of these layers is a significantly complex operation and <em>often</em> requires redevelopment of software to support the new layer.</p>
+</div>
+<div class="paragraph">
+<p>This Language enables progression between the layers, <em>and</em> decentralization between XaaS platforms. Or simply <strong>Agnostic</strong> Computing, or <strong>Foggy Ubiquity</strong> (hence the name)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_governance"><a class="anchor" href="#_governance"></a>Governance</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Centralized, Decentralized, Federated, are all common Governmental approaches leveraged in both Cloud &amp; Fog Computing. Additionally is becoming more common for companies to transition between these approaches over time. When creating Foggy Ubiquity the Governance challenge was about enabling Federated Governance globally. Even when not in-use by the organization.</p>
+</div>
+<div class="paragraph">
+<p>This was achieved through setting the expectation that implementations would utilize two types of repositories.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Governance</p>
+</li>
+<li>
+<p>Code</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Where <code>Software System(s)</code> &amp; <code>Deployment Targets (environments)</code> may choose to place their configuration in the Governance repository while the vast majority of configuration would reside alongside the individual software&#8217;s code-base as per the <a href="https://www.weave.works/blog/gitops-operations-by-pull-request&lt;Paste&gt;">GitOps</a> approach.</p>
+</div>
+<div class="paragraph">
+<p>To enable Governance, Foggy Ubiquity&#8217;s Language providers the concept of <em>Technology Descriptors</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="deployment-target/structure.html#_deploymenttarget_technology_descriptor" class="page"><code>deploymentTarget</code></a></p>
+</li>
+<li>
+<p><a href="container/structure.html#_systemtarget_technology_descriptor" class="page"><code>systemTarget</code></a></p>
+</li>
+<li>
+<p><a href="container/structure.html#_containertarget_technology_descriptor" class="page"><code>containerTarget</code></a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>componentTarget</code> is not necessary as by definition <code>components</code> are a subsection of <code>container(s)</code> and inherit <em>all</em> of the <code>container</code> configuration.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_implementations"><a class="anchor" href="#_implementations"></a>Implementations</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.cyvive.io/">Cyvive: Immutable Change Operational Platform</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+</main>
+</div>
+<footer class="footer">
+  <p>©2019 Keidrych Anton-Oates</p>
+</footer>
+<script type="text/javascript">
+  window.antora = window.antora || {}
+  window.antora.basePath = '..'
+  window.antora.pagePath = '/language/index.html'
+</script>
+<script src="../_/js/site.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/vendor/pako.min.js"></script>
+<script src="../_/js/vendor/search.js"></script>
+<script>antoraLunr.init("../_/../search_index.json.gz")</script>
+<script src="../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>

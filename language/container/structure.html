@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Container: Structure :: Foggy Ubiquity</title>
+    <link rel="canonical" href="http://www.foggyubiquity.com/language/container/structure.html">
+    <meta name="description" content="TODO">
+    <meta name="keywords" content="microservices, governance, suite, group">
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/search.css">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://www.foggyubiquity.com">Foggy Ubiquity</a>
+        <div class="navbar-item">
+          <input id="search-input" type="text" placeholder="Search docs">
+        </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/devsecops/" rel=canonical>Blog</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="/xaas/">XaaS</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="/xaas/kubernetes">Kubernetes</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="/devsecops/">DevSecOps</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="/devsecops/nixos">1. NixOS</a>
+            <a class="navbar-item" href="/devsecops/continuous-integration">2. Continuous Integration</a>
+            <a class="navbar-item" href="/devsecops/containers">3. Containers</a>
+            <a class="navbar-item" href="/devsecops/continuous-deployment">4. Continuous Deployment</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="/language/">Language</a>
+        <a class="navbar-item" href="http://www.keidrych.com/">Author 🔗</a>
+        <!--
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+        !-->
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="language" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Language</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">About</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../deployment-target/index.html">Deployment Targets</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../deployment-target/structure.html">Structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../software-system/index.html">Software System</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../software-system/structure.html">Structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Containers</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="structure.html">Structure</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Language</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">DevSecOps</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../devsecops/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Language</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">XaaS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../xaas/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main role="main">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../devsecops/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Language</a></li>
+    <li><a href="index.html">Containers</a></li>
+    <li><a href="structure.html">Structure</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/foggyubiquity/language/edit/master/modules/container/pages/structure.adoc">Edit this Page</a></div>
+</div>
+<article class="doc">
+<h1 class="page">Container: Structure</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_mapping_to_container_image_repositories">Mapping to Container Image Repositories</a></li>
+<li><a href="#_systemtarget_technology_descriptor"><code>systemTarget</code> Technology Descriptor</a></li>
+<li><a href="#_containertarget_technology_descriptor"><code>containerTarget</code> Technology Descriptor</a>
+<ul class="sectlevel2">
+<li><a href="#_availability"><code>availability</code></a></li>
+<li><a href="#_circuitbreaker"><code>circuitBreaker</code></a></li>
+<li><a href="#_commandlineinterface"><code>commandLineInterface</code></a></li>
+<li><a href="#_component"><code>component</code></a></li>
+<li><a href="#_daemon"><code>daemon</code></a></li>
+<li><a href="#_endpoint"><code>endpoint</code></a></li>
+<li><a href="#_environment"><code>environment</code></a></li>
+<li><a href="#_hardwired"><code>hardWired</code></a></li>
+<li><a href="#_label"><code>label</code></a></li>
+<li><a href="#_layer"><code>layer</code></a></li>
+<li><a href="#_repository"><code>repository</code></a></li>
+<li><a href="#_resource"><code>resource</code></a></li>
+<li><a href="#_security"><code>security</code></a></li>
+<li><a href="#_stateful"><code>stateful</code></a></li>
+<li><a href="#_version"><code>version</code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>File:</strong>		<code>*.container.yaml</code></p>
+</li>
+<li>
+<p><strong>Repository:</strong> <em>Code</em></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title">Absolute Minimum Necessary Keys</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+⇛ exampleContainer:
+⇛   version: 'v1.8.x'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… the provision of these three keys is analogous to <code>docker run exampleSystem/exampleContainer:v1.8.x</code> and should be all that&#8217;s necessary for a well defaulted application to run in a Foggy world.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+'⇛' character is used throughout this documentation where items are mandatory with respect to the parent YAML key. If not specified, then item is optional.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_mapping_to_container_image_repositories"><a class="anchor" href="#_mapping_to_container_image_repositories"></a>Mapping to Container Image Repositories</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>All major cloud native &amp; agnostic architecture patterns have 3 categorization levels, in <a href="https://c4model.com/">C4 Model</a> these are <code>software system</code>, <code>container</code>, <code>component</code>. Container Image Repositories i.e. <a href="https://hub.docker.com/">DockerHub</a> have been designed with only 2 categorization levels.</p>
+</div>
+<div class="paragraph">
+<p>To prevent re-invention of the wheel, a slight modification of standard naming approaches for Containers was implemented to support compatibility with 3 level software architectures, while maintaining backwards compatibility with the 2 category Repository naming approach.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+⇛ exampleContainer:
+    component: 'algorithmic'
+⇛   version: 'vTag'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Results in:
+* <code>exampleSystem/exampleContainer:vTag</code> or
+* <code>exampleSystem/exampleContainer-algorithmic:vTag</code> if <code>component</code> key has been provided</p>
+</div>
+<div class="paragraph">
+<p>Strictly speaking Tag Names are used for Software &amp; Release Versioning. An deep dive into this can be found on [Foggy Ubiquity: Secure Containers] &amp; [Foggy Ubiquity: Human Service Versioning] as such the only logical location for injection of <code>component</code> while maintaining human &amp; filtering capability was post <code>containerName</code></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_systemtarget_technology_descriptor"><a class="anchor" href="#_systemtarget_technology_descriptor"></a><code>systemTarget</code> Technology Descriptor</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+⇛ exampleContainer: {}
+  system: {}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Configuration automatically inherited from higher architectural levels and merged with priority on lower level configuration. i.e.:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">userManagement:
+  authentication:
+		environment:
+			variable:
+				REDIS: '192.168.0.1'
+	system:
+		environment:
+			variable:
+				REDIS: `localhost`</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The container <code>authentication</code> environment <code>REDIS</code> would override the <code>system</code> defined value.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="title">Inheritance Order</div>
+<div class="paragraph">
+<p><code>deploymentTarget</code> ⇛ <code>systemTarget</code> ⇛ <code>containerTarget</code> (<code>componentTarget</code>)</p>
+</div>
+<div class="paragraph">
+<p>Furthest right matching value for any setting overrides left value.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Implementation Patterns</div>
+<div class="paragraph">
+<p>For simple Software Systems, the <code>system</code> values may be bundled into each <code>container</code> definition file following the distributed pattern. In more complex (most) situations a federated approach is more suitable where <code>system</code> keys would be managed in a dedicated repository.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Additional information on the <a href="../software-system/index.html" class="page"><code>system</code> Technology Descriptor</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_containertarget_technology_descriptor"><a class="anchor" href="#_containertarget_technology_descriptor"></a><code>containerTarget</code> Technology Descriptor</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem
+  exampleContainer:
+    availability: {}
+    circuitBreaker: {}
+    commandLineInterface: {}
+    component: string
+    daemon: boolean
+    endpoint: {}
+    environment: {}
+    label: {}
+    layer: string
+    repository: {}
+    resource: {}
+    security: {}
+    stateful: {}
+    version: {}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… illustrates a high level overview of the logical configuration sections. Detailed information is located under each subheading below. Where values for keys are shown they are the default values.</p>
+</div>
+<div class="sect2">
+<h3 id="_availability"><a class="anchor" href="#_availability"></a><code>availability</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    availability:
+      gracePeriod:
+        boot: 1
+        stability: 0
+        termination: 5
+      minimum: 1
+      maximum: 2
+      probe:
+        health:
+          interval: 10
+          path: '/'
+          port: 80
+        ready:
+          interval: 5
+          path: '/'
+          port: 80
+        timeout: 1
+      scalingEvent: {}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>gracePeriod</code>: minimum time in seconds to wait for events to occur</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>boot</code>: <code>container / component</code> &amp; container operating system startup boot time, this should be the minimum time before a health check endpoint is available to process a request.</p>
+</li>
+<li>
+<p><code>stability</code>: time to wait in seconds for the health check endpoint to ensure consistent returns after boot time has been completed. Typically used in legacy applications that need to stabilize their upstream and downstream communications when started or have large amounts of data to sync.</p>
+</li>
+<li>
+<p><code>termination</code>: maximum time in seconds before hard terminating the container operating system. By nature it cannot guarantee the management technology will provide this long to terminate, where supported by orchestration systems this is the time to wait after <code>SIGTERM</code> before <code>SIGKILL</code> is issued to the container operating system.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>minimum</code>: guaranteed minimum number of <code>container / component</code> replicas always available</p>
+</li>
+<li>
+<p><code>maximum</code>: when scaling ensure that this number is not exceeded</p>
+</li>
+<li>
+<p><code>probes</code>: <code>/health</code> is actual health i.e has software crashed, and <code>/ready</code> is ability to receive traffic</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>interval</code>: time in seconds for checking endpoint</p>
+</li>
+<li>
+<p><code>path</code>: endpoint path relative to container&#8217;s <code>localhost</code></p>
+</li>
+<li>
+<p><code>port</code>: internal port the probe endpoint is listening on</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>timeout</code>: time in seconds for probe to respond. Set identically for both <code>/health</code> and <code>/ready</code>. In well designed software systems provision of different values for <code>/health</code> and <code>/ready</code> is tautological.</p>
+</li>
+<li>
+<p><code>scalingEvent</code>: is a pass-through object i.e. the object is provided to the container management technology and should conform with its expectations for scaling.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title"><a href="http://www.cyvive.io/governance">Cyvive Implementation</a></div>
+<div class="paragraph">
+<p>Automatically stalls deployments as failed if the <code>container</code> or <code>component</code> fails to enter <code>ready</code> state using one of the following time-lines in order of priority rounded to the nearest second:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>probe.ready</code>: gracePeriod.boot + gracePeriod.stability + (probe.ready.interval . 2) {default: 3.3}</p>
+</li>
+<li>
+<p><code>probe.health</code>: gracePeriod.boot + gracePeriod.stability + probe.health.interval			{default: 3.3}</p>
+</li>
+<li>
+<p><code>gracePeriod.stability</code>: gracePeriod.boot + gracePeriod.stability + 10								{default: 3.3}</p>
+</li>
+<li>
+<p><code>gracePeriod.boot</code>: gracePeriod.boot + 10																						{default: 3.3}</p>
+</li>
+<li>
+<p><code>default settings</code>: <code>33</code> seconds</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>10% buffer is applied to times to ensure container scheduling / restarting via the orchestrator doesn&#8217;t introduce false-positives.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_circuitbreaker"><a class="anchor" href="#_circuitbreaker"></a><code>circuitBreaker</code></h3>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+under discussion (seeking production requirements)
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_commandlineinterface"><a class="anchor" href="#_commandlineinterface"></a><code>commandLineInterface</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    commandLineInterface:
+      argument: []
+      command: ''</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… override path for container start commands. While the container itself may contain start commands, often enterprise preference is to maintain a single interface for all configuration.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>argument</code>: standard cli arguments for execution. e.g. ['--list', '--debug']</p>
+</li>
+<li>
+<p><code>command</code>: root command to execute when starting the container. e.g. '/usr/local/bin/command' should this not be specified then the default command the container was built with will be executed.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_component"><a class="anchor" href="#_component"></a><code>component</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    component: ''</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… component as specified in <a href="https://c4model.com/">C4 Model</a> ideally this would be for algorithmic capabilities without data-management i.e. Functions in MicroService architecture.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_daemon"><a class="anchor" href="#_daemon"></a><code>daemon</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    daemon: false</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… upgrades the <code>container</code> to run as a <em>Daemon</em> type in Cloud Native Architecture ensuring that every physical node belonging to cluster will have this <em>Daemon</em> available on a low-latency local network hop.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_endpoint"><a class="anchor" href="#_endpoint"></a><code>endpoint</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    endpoint:
+      domain: {}
+      port: 80
+      provide: ['/']
+      scheme: 'https'
+      require: []</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… created for every <code>container / component</code>. If <code>domain</code> is not specified this <code>container / component</code> will be available <strong>only</strong> within the cluster. Two DNS entries are generated:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>componentName_containerName.systemName.deploymentTarget.domain</code> always provides the latest version</p>
+</li>
+<li>
+<p><code>version_componentName_containerName.systemName.deploymentTarget.domain</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If this is not a <code>component</code> then <code>componentName</code> will be omitted.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<code>component</code> names are assumed incapable of replicating <code>version</code> names.
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>port</code>: open port for inbound interaction.</p>
+</li>
+<li>
+<p><code>provide</code>: <strong>important</strong> for correct dependency management the <code>provide</code> endpoints are the registration points in the deployment graph.</p>
+</li>
+<li>
+<p><code>scheme</code>: extensible against the scheme definitions in RFC standards, the key types are <em>http</em> and <em>https</em> where specifying https will cause auto-creation of SSL certificates at the cluster ingress point via <a href="https://letsencrypt.org/">Lets Encrypt</a></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">DNS Generation</div>
+<div class="paragraph">
+<p><code>_</code> is used to separate values to prevent conflict and ensure compliance with <a href="https://semver.org/">SemVer</a> where <code>-</code> may be provided for custom metadata information.</p>
+</div>
+<div class="paragraph">
+<p>Additional <code>.</code> dots are not used to separate values to prevent deep dot lookups. i.e. Kubernetes already provides 5 <code>.</code> dots for container addressing.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><strong>Complex root keys:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">domain:
+  'xyz.com': ['DEVLIKE', 'HALIKE', 'PRODLIKE']
+  'testing.co': ['DEVLIKE']</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>domain</code> object is structured as follows:
+* <code>key</code>: the domain name to expose against. This should be the Fully Qualified Domain Name (<em>FQDN</em>) as autogenerated DNS structure applies inside the cluster only.
+* <code>value</code>: array of <code>operatingEnvironment(s)</code> to expose specific <code>domain(s)</code> against.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">require:
+  - 'redux.exampleSystem:443/api/v1/ending': ['incoming']
+  - 'exampleContainer.exampleSystem:80/v1/': ['incoming', 'outgoing']
+  - '162.0.5.2:8080/': ['outgoing']
+	- '@version': {}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>require</code> while optional, is recommended as it identifies all dependencies this <code>container / component</code> requires prior to container startup.</p>
+</div>
+<div class="paragraph">
+<p>Often prior versions of the same <code>container / component</code> may be consumed by newer versions. Typically to prevent code duplication and stabilize major API versions. Prior versions can be specified either using the full DNS name as automatically generated above or via the shorthand <code>@version</code>. Any value provided to <code>@version</code> will be ignored and both <code>incoming</code> &amp; <code>outgoing</code> traffic will be permitted against prior versions of the same <code>container / component</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>require</code> object is structured as follows:
+- <code>key</code>: Uniform Resource Identifier (URI) [RFC 3986](<a href="https://www.ietf.org/rfc/rfc3986.txt" class="bare">https://www.ietf.org/rfc/rfc3986.txt</a>) compliant. The scheme is unnecessary as any routing restrictions are scoped as above
+- <code>value</code>: traffic direction for firewall / security registration</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title"><a href="http://www.cyvive.io/governance">Cyvive Implementation</a></div>
+<div class="paragraph">
+<p>In the event a <code>require</code> is not registered with <strong>Cyvive</strong> it will be considered external to the cluster and <strong>assumed</strong> to already exist. The same applies for prior versions.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_environment"><a class="anchor" href="#_environment"></a><code>environment</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    environment:
+      files:
+        config: {}
+        secret: {}
+      variable: {}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… all items are directly exposed.</p>
+</div>
+<div class="paragraph">
+<p><strong>Complex root keys:</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">files:
+  config:
+    'alpha':
+      mountPath: '/alpha'
+      data:
+        - name: configDetail
+          value: 'string of information'
+    'delta':
+      inheritSystem: false</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Each item in <code>config</code> is a representation of a <em>ConfigMap</em> with individual items specified in the array object under <code>data</code>. Each item represents an individual file. <code>mountPath</code> is the directory location in the container that the <em>ConfigMap</em> should be mounted to.</p>
+</div>
+<div class="paragraph">
+<p>If <code>inheritSystem</code> is provided the configuration will be loaded from the system settings enabling a more <em>global</em> oriented view of configuration</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">files:
+  secrets:
+    'secretname':
+      type: 'opaque'
+      mountPath: '/secret-location'
+      data:
+        - name: secretInfo
+          value: (base64 string)
+    'anothersecret':
+      inheritSystem: false</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Each item in <code>secrets</code> is a map with individual items under <code>data</code> representing files to be mounted into the <code>mountPath</code> location in the container.</p>
+</div>
+<div class="paragraph">
+<p>If <code>inheritSystem</code> is provided the secret will be loaded from the system settings enabling a more <em>global</em> oriented view of configuration</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">variable:
+  'exposeName': 'exposeValue'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Direct mapping of the <code>key</code> to <code>value</code> provided as an environmental variable when executing the container start command.</p>
+</div>
+<div class="paragraph">
+<p><strong>Reserved Environment Keys</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>SELF_NAME</code>: name of the <code>container / component</code>. This should also be the <code>hostname</code> of the running container for maximum compatibility</p>
+</li>
+<li>
+<p><code>SELF_NAME_LOADBALANCER</code>: to assist in discovery, this is the versioned LoadBalancer endpoint for in cluster communication to this container and its replicas. Relative to the deploymentTarget and not the Fully Qualified Domain Name (FQDN) of internal or external registration</p>
+</li>
+<li>
+<p><code>SELF_DEPLOYMENTTARGET</code>: <em>deploymentTarget</em> that the Container/NanoService has been deployed into</p>
+</li>
+<li>
+<p><code>SELF_IP</code>: the internal cluster IP of the container</p>
+</li>
+<li>
+<p><code>SELF_MIN_MEMORY</code></p>
+</li>
+<li>
+<p><code>SELF_MIN_CPU</code></p>
+</li>
+<li>
+<p><code>SELF_MAX_MEMORY</code></p>
+</li>
+<li>
+<p><code>SELF_MAX_CPU</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hardwired"><a class="anchor" href="#_hardwired"></a><code>hardWired</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    hardWired:
+      clusterDNS: ''</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… is a catch-all for compatibility with non-governed processes. <em>It is strongly recommended not to use these keys unless absolutely necessary</em> as each key will disable some governance functionality and introduce independent manual management scenarios that wouldn&#8217;t normally be necessary.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>clusterDNS</code>: is a hard overwrite of the cluster internal load balancer endpoint for the <code>container / component</code>. It disables the auto-generation capabilities and can help with initially migrating non Cloud Native items.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_label"><a class="anchor" href="#_label"></a><code>label</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    label:
+      = app:			autocompleted ~ appName
+      = component:	        autocompleted ~ component
+      = release:		autocompleted in PRODLIKE environments ~ canary or stable
+      = tier:			autocompleted ~ systemName
+      = version:		autocompleted ~ version key
+      {any others you require}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+the labels specified above are assumed to be automatically generated and owned by the implementation. Manually specifying them is tautological and would be ignored by the implementation.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="title">Containers at Scale</div>
+<div class="paragraph">
+<p>Avoid using <em>hotfix</em> as a label. Versioning is available for all <code>version(s)</code> and simplifies consistency between environments.</p>
+</div>
+<div class="paragraph">
+<p>Avoid using <em>blue</em> / <em>green</em> for deploys as <em>canary</em> has been proven to be a more stable; reduced risk; and governable approach. In Continuous Deployment all software passes through a <em>canary</em> state anyway. (Under candidate based releases hotfixes are just releases that have been accelerated through the canary phase).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>There is no limit to how many labels can be specified</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_layer"><a class="anchor" href="#_layer"></a><code>layer</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    layer: 'base'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… is a concept often used in Enterprise Architecture. This key sparked more discussion than any other in the creation of this specification.</p>
+</div>
+<div class="paragraph">
+<p>The layer concept is used as part of the dependency graph generation process. Prioritizing and guaranteeing deployments of each layer prior to commencing the next, enabling a fail fast approach when any layer fails to deploy.</p>
+</div>
+<div class="paragraph">
+<p>It is <strong>not</strong> an architectural specification, just categorization and prioritization approach. Cloud Native compatible Architectures are assumed to be used irrespectively.</p>
+</div>
+<div class="paragraph">
+<p><strong>Layers in Order</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>data</p>
+</li>
+<li>
+<p>communication</p>
+</li>
+<li>
+<p>cache</p>
+</li>
+<li>
+<p>backend</p>
+</li>
+<li>
+<p>frontend</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>While strictly not necessary to specify, if known the <code>layer</code> should be specified as it allows for accelerated parallel deployment in the desired <em>deploymentTarget</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_repository"><a class="anchor" href="#_repository"></a><code>repository</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem
+  exampleContainer:
+    repository:
+      image:
+        domain: 'hub.docker'
+        name: 'exampleRedux'
+        officialImage: false
+        owner: 'exampleRedux'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… image registry auto-generated names use the format: <code>repository/owner/name</code> as such the default would be one of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>hub.docker/exampleSystem/exampleContainer</code> or</p>
+</li>
+<li>
+<p><code>hub.docker/exampleSystem/exampleContainer-exampleComponent</code> if <code>component</code> key provided</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>image</code> key allows customization to your needs in any combination using the following values:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>domain</code>: overrides <code>system</code> or <code>template</code> <code>domain</code> settings</p>
+</li>
+<li>
+<p><code>name</code>: overrides <code>exampleContainer</code> in the sample. This impacts deployed application name &amp; container image repository URI generation.</p>
+</li>
+<li>
+<p><code>officialImage</code>: is a structural specification for <em>DockerHub</em> where official images have a different retrieval structure. Setting this as true would result in <em>exampleContainer</em> being the official image name or if provided <code>name</code> would still override to be the official image name.</p>
+</li>
+<li>
+<p><code>owner</code>: override for owner in technology descriptor</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_resource"><a class="anchor" href="#_resource"></a><code>resource</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    resource:
+      max:
+        cpu: 500
+        memory: 1Gi
+      min:
+        cpu: 250
+        memory: 0.5Gi
+      qos: ''</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… resource allocation is an important part of all container orchestration, and its <strong>strongly</strong> suggested these values are provided prior to deploying <code>container / component</code> to <code>production</code> <em>deploymentTarget</em>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>max</code> absolute maximum requirements that we are prepared to allocate.</p>
+</li>
+<li>
+<p><code>min</code> minimum required in order to guarantee application boot and ready for traffic interaction.</p>
+</li>
+<li>
+<p><code>qos</code> is <strong>mandatory</strong> should <code>min</code> or <code>max</code> be specified</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If neither <code>min</code> or <code>max</code> are specified then <code>system</code> defaults (if specified) will be used. The ability to provide <code>system</code> resource defaults is to ensure safe co-habitation of Services / Applications / Components when / if they go rogue.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>cpu</code> are units of CPU core specified in 'm' thus for a single CPU core <em>1000</em> should be used. Appending the 'm' is unecessary.</p>
+</li>
+<li>
+<p><code>memory</code> should always have the multiplier specified as part of the value i.e. 'Gi' any suitable value can be specified from the following: <code>Ki Mi Gi Ti Pi Ei</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>qos</code> follows the approach:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>guaranteed</strong>: highest possible level, everything not this level will suffer CPU <em>pause</em> events to ensure these pods continue to operate. <code>max</code> values will be utilized exclusively.</p>
+</li>
+<li>
+<p><strong>burstable</strong>: <em>default</em> <code>min</code> values are allocated to the pod as minimum required to run. If <code>max</code> is specified these limits will be placed on resources, if <code>max</code> unspecified , no upper limits are placed on resources.</p>
+</li>
+<li>
+<p><strong>effort</strong>: can be used when the application is lowest priority of them all. <code>min</code>, <code>max</code> CPU values are totally ignored. <code>min</code> memory if provided is utilized.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_security"><a class="anchor" href="#_security"></a><code>security</code></h3>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+under discussion (seeking production requirements)
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    security:
+      account:
+        name: alternativeOne
+        reference: admin</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>account</code>: should an account be required that isn&#8217;t the system security account or 'default' i.e. another system&#8217;s account. It can be overriden here. <em>Specifying will create the account if it doesn&#8217;t exist</em></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_stateful"><a class="anchor" href="#_stateful"></a><code>stateful</code></h3>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+under discussion (seeking production requirements)
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer
+    stateful:
+      cloudNative: false
+      databaseName: ''
+      individualServices: false
+      replica: 3
+      sharedStorage: false
+      volume:
+        'avolume':
+          mountPath: '/avolume'
+          size: '10Gi'
+          storageClass: ''</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>cloudNative</code>: Enables the ability to deploy stateful applications in parallel and will automatically compact number of replicas down in envionments that aren&#8217;t 'HALIKE' or 'PRODLIKE' to save resources.</p>
+</li>
+<li>
+<p><code>databaseName</code>: standard application naming will be applied if this field is omitted. Its frequently used in custom templates for configuring some of the expected internals</p>
+</li>
+<li>
+<p><code>individualServices</code>: some applications can operate under a common service endpoint, others such as MongoDB require fixed service endpoints for each database</p>
+</li>
+<li>
+<p><code>replica</code>: number of PODS that should be deployed, if the backend supports it anti-affinity rules will already be in place per Availablility Zone and Host.</p>
+</li>
+<li>
+<p><code>sharedStorage</code>: determines if the PODS should have mount the same storage or have unique storage per pod (<strong>warhing</strong> multi-mount storage is unsupported by most storage drivers)</p>
+</li>
+<li>
+<p><code>storageClass</code>: the type of storage strategy that should be applied</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In providing a consistent minimal configuration the <code>stateful</code> configuration integrates with <code>endpoint</code> and it should be used for accessing accordingly</p>
+</div>
+<div class="paragraph">
+<p>Amount of time that should be given after sending <em>kill</em> signal to the container OS before terminating and removing the container.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_version"><a class="anchor" href="#_version"></a><code>version</code></h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">exampleSystem:
+  exampleContainer:
+    version: 'latest'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… configuration is not static, as such any implementation of this specification should be capable of versioning. Independent of the source code repository type used i.e. Git.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Implementations following this specification will key their internal configuration versioning to this value. Modifying configuration and <strong>not</strong> incrementing this value would be expected to override configuration for deployed <code>container / components</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Static labels i.e. <code>latest</code> can also be used with the understanding that configuration changes will be applied to all future <em>deploymentTarget</em> and container images will be re-pulled every time.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="title"><a href="http://www.cyvive.io/governance">Cyvive Implementation</a></div>
+<div class="paragraph">
+<p>For effective governance of infrastructure in cloud native approaches Semantic Versioning [SemVer](<a href="https://semver.org/" class="bare">https://semver.org/</a>) is sanest choice. While Container/NanoService versioning typically is best systemd to [ComVer](<a href="https://github.com/staltz/comver" class="bare">https://github.com/staltz/comver</a>)</p>
+</div>
+<div class="paragraph">
+<p>Integration with SemVer only tracks <code>major</code> <code>minor</code> <code>patch</code> the <em>extensions format</em> is stripped off for tracking purposes.</p>
+</div>
+<div class="paragraph">
+<p>Container images when using SemVer are <strong>not</strong> re-pulled from the image repository as they are assumed to be immutable.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+</main>
+</div>
+<footer class="footer">
+  <p>©2019 Keidrych Anton-Oates</p>
+</footer>
+<script type="text/javascript">
+  window.antora = window.antora || {}
+  window.antora.basePath = '../..'
+  window.antora.pagePath = '/language/container/structure.html'
+</script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/vendor/pako.min.js"></script>
+<script src="../../_/js/vendor/search.js"></script>
+<script>antoraLunr.init("../../_/../search_index.json.gz")</script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>

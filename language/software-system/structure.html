@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Software System: Structure :: Foggy Ubiquity</title>
+    <link rel="canonical" href="http://www.foggyubiquity.com/language/software-system/structure.html">
+    <meta name="description" content="TODO">
+    <meta name="keywords" content="microservices, governance, suite, group">
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="stylesheet" href="../../_/css/search.css">
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="http://www.foggyubiquity.com">Foggy Ubiquity</a>
+        <div class="navbar-item">
+          <input id="search-input" type="text" placeholder="Search docs">
+        </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="/devsecops/" rel=canonical>Blog</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="/xaas/">XaaS</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="/xaas/kubernetes">Kubernetes</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="/devsecops/">DevSecOps</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="/devsecops/nixos">1. NixOS</a>
+            <a class="navbar-item" href="/devsecops/continuous-integration">2. Continuous Integration</a>
+            <a class="navbar-item" href="/devsecops/containers">3. Containers</a>
+            <a class="navbar-item" href="/devsecops/continuous-deployment">4. Continuous Deployment</a>
+          </div>
+        </div>
+        <a class="navbar-item" href="/language/">Language</a>
+        <a class="navbar-item" href="http://www.keidrych.com/">Author 🔗</a>
+        <!--
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+        !-->
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="language" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Language</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">About</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../deployment-target/index.html">Deployment Targets</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../deployment-target/structure.html">Structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Software System</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="structure.html">Structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../container/index.html">Containers</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../container/structure.html">Structure</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Language</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">DevSecOps</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../devsecops/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Language</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">XaaS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../xaas/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main role="main">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../devsecops/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Language</a></li>
+    <li><a href="index.html">Software System</a></li>
+    <li><a href="structure.html">Structure</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/foggyubiquity/language/edit/master/modules/software-system/pages/structure.adoc">Edit this Page</a></div>
+</div>
+<article class="doc">
+<h1 class="page">Software System: Structure</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_environment"><code>environment</code></a></li>
+<li><a href="#_repository"><code>repository</code></a></li>
+<li><a href="#_security"><code>security</code></a></li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>File:</strong> <code>*.system.yaml</code></p>
+</li>
+<li>
+<p><strong>Repository:</strong> <em>Governance</em></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">(name of system):
+  system:
+    environment: {}
+    repository:
+      image:
+        auth: {}
+        domain: 'hub.docker.io'
+        owner: (software system)
+    security: {}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… <code>system</code> is a reserved keyword. Any keys associated with <code>system</code> should be applied as defaults to any <a href="../container/index.html" class="page">Containers</a> associated with the Software System.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_environment"><a class="anchor" href="#_environment"></a><code>environment</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>… structural copy of <a href="../container/index.html#_environment" class="page">Container: <code>environment</code></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_repository"><a class="anchor" href="#_repository"></a><code>repository</code></h2>
+<div class="sectionbody">
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+DockerHub set the standard for organizing Containers in a Container Image Repository (CIR), the general expectation is that the CIR format of <code>hub.docker.io/(owner)/(image):(tag)</code> is observed where owners following best practice are Software Systems
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">(name of system):
+  system:
+    repository:
+      image:
+        auth: {}
+        domain: 'hub.docker.io'
+        owner: (software system)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>… structurally modelled on <a href="../container/index.html#_repository" class="page">Container: <code>repository</code></a> with slight differences as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">image:
+  auth:
+    '(login information)': 'ZmF0aG9tYWJsZQo='
+  domain: 'gcr.io'
+  owner: '(software system)'</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>auth</code>: is a key value series of base64 encoded objects containing the Docker login information.</p>
+</li>
+<li>
+<p><code>domain</code>: container repository domain information, this will become the default for all items registered against this system</p>
+</li>
+<li>
+<p><code>owner</code>: by default <code>owner</code> would be the <code>(name of system)</code>. This provides the option to provide a different owner compared to Software System name.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_security"><a class="anchor" href="#_security"></a><code>security</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>… structural copy of <a href="../container/index.html#_security" class="page">Container: <code>security</code></a></p>
+</div>
+</div>
+</div>
+</article>
+</main>
+</div>
+<footer class="footer">
+  <p>©2019 Keidrych Anton-Oates</p>
+</footer>
+<script type="text/javascript">
+  window.antora = window.antora || {}
+  window.antora.basePath = '../..'
+  window.antora.pagePath = '/language/software-system/structure.html'
+</script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/vendor/pako.min.js"></script>
+<script src="../../_/js/vendor/search.js"></script>
+<script>antoraLunr.init("../../_/../search_index.json.gz")</script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+  </body>
+</html>
