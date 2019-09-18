@@ -15,7 +15,7 @@
 == HyperVisor Virtualization
 
 * Sandbox for programmers debugging and developing operating systems.
-* Allowed working without using all of the hardware’s resources.
+* Allowed working without using all the hardware’s resources.
 * Evolved into running multiple environments on one machine concurrently
 
 === Type 1 HyperVisor
@@ -39,7 +39,7 @@
 
 === User / Workspace
 
-Unix is an example of Virtualization at the User or Workspace Level. Multiple users share the same CPU, Memory, Hard Disk, etc… pool of resources, but each has its own profile, separate from the other users on the system. first step towards application virtualization
+Unix is an example of Virtualization at the User or Workspace Level. Multiple users share the same CPU, Memory, Hard Disk, etc… pool of resources, but each has its own profile, separate from the other users on the system. First step towards application virtualization.
 
 === Application
 
