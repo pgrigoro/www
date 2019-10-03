@@ -195,7 +195,7 @@ image::https://miro.medium.com/max/450/1*6DmMcht3u2xegun_0Ler4g.png[Pain of Kube
 
 === Control
 
-Containers are https://linuxcontainers.org/lxcfs/introduction/[LXCFS] MicroOS' on Minimal HyperVisors.
+Containers are MicroOS FileSystems supported by Minimal HyperVisors.
 
 image::https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/84554048-135d-45bc-9a5b-0c8373dfd0a4/File/e8a0551d97202fca1bdf2d993f84a24a/untitled.png[KataContainers]
 

@@ -1,0 +1,472 @@
+:author: Keidrych Anton-Oates <me@keidrych.com>
+:blog: http://www.foggyubiquity.com
+:icons: font
+
+= Containizen
+
+*Contain*(_er_) (_Den_)*izen*(_s_)
+
+== Presentation or Coffee?
+
+image::https://docops.ca.com/ca-continuous-delivery/en/files/367941078/385522358/1/1484957030359/ThreePillars.png[CA]
+
+== Container
+
+MicroOS FileSystems supported by Minimal HyperVisors.
+
+image::https://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/84554048-135d-45bc-9a5b-0c8373dfd0a4/File/e8a0551d97202fca1bdf2d993f84a24a/untitled.png[KataContainers]
+
+=== Denizen
+
+"`a person, animal, or plant that lives or is found in a particular place`"
+
+image::http://www.spiritedbiz.com/wp-content/uploads/2018/04/Denizen_Rum_MerchantsReserve_750ml-522x640.jpg[Rum]
+
+=== Code of Conduct
+
+* CNCF Architecture
+* 12 Factor Compliance
+* Container = Production Candidate
+* GitOps
+** Code Quality
+** Vulnerability Scanning
+** Config / Secret
+* Continua
+
+=== Continua
+
+Gradual increase of environmental complexity until it is indistinguishable from actual _production_
+
+1. *Dev*: Development & Test
+2. *HA*: High Availability
+3. *Perf*: Performance
+4. *Prod*: Production
+
+== InfoSec Synergy
+
+=== Target State
+
+* Red: (Offensive Security) @ Security
+** An actual _Black Box_
+* Blue: (Defensive Security) @ Operations
+** Vulnerability & Configuration Management
+* Yellow: (Builders) @ Development
+** _Crafted Code_ to be proud of
+
+=== via Container(s)
+
+Containers encapsulate the deployment and runtime, and large portion of security requirements of software into an aggregated, common & mostly reproducible environment.
+
+== Why Change?
+
+===  ¯\\_(ツ)_/¯
+
+*Works On My Machine...*
+
+https://blog.codinghorror.com/the-works-on-my-machine-certification-program/[WOMM Certification Program] is available!
+
+[%conceal]
+=== WOMM cont
+
+IT organizations have come up with two broad approaches to solving this problem:
+
+1. Make the development environment look more like production
+2. Make production look more like the development environment
+
+=== Orthodoxy
+
+"`Development looks like Production`"
+
+* Production => Dev data https://www.sqlshack.com/using-production-data-testing-post-gdpr-world/[Illegal via GDPR]
+* Secret Management
+* Restricted API Limits
+* Stingy Resource Allocation
+
+
+=== Insurgency
+
+"`Production looks like Development`"
+
+* Red Team:
+** *Party!* https://youtu.be/wSqFqhUzutg[Tripod: 'Gonna Make you Happy!']
+* Blue Team:
+** _everyone, please observe a moment of silence_
+* Yellow Team:
+** _hail_ your new 24x7x365 System Overlords...
+
+*history of failure..*
+
+=== Constraint #1
+
+[%step]
+* cloning disks/images/VMs is time-consuming and expensive
+* Containers:
+** 'My Machine <==> Production'
+** via *Golden Image*
+
+=== Constraint #2
+
+[%step]
+* Constraint #2: Applications aren’t ready
+* Architecture: Retire
+** DDD
+** N-Tier
+* Architecture: Embrace
+** C4 Model & arc42
+** CNCF
+
+== Container Technology
+
+[%conceal]
+=== Key differences LXC / Docker
+
+image::https://robin.io/wp-content/uploads/2017/01/linux-vs-docker-comparison-application-support.png[background, size=contain]
+
+[%conceal]
+=== Moby / Docker's EcoSystem
+
+image::https://cdn.thenewstack.io/media/2017/05/9b9a5266-moby-project.png[background, size=contain]
+
+=== Golden Image
+
+image::https://shipped.com/blog/wp-content/uploads/2015/08/hp1.jpg[Golden Container]
+
+[%conceal]
+=== Inner Workings
+
+image::https://res.cloudinary.com/tayloredtechnology/image/upload/q_auto/v1568906783/foggyubiquity.com/Blog_204_20-_203_09252017.jpg[background, size=contain]
+
+=== Kernel: Linux
+
+* Host OS provides
+** Irrelevant for _Container_
+** mnt, uts, ipc, pid & net managed via _RunC_
+
+https://medium.com/@saschagrunert/demystifying-containers-part-i-kernel-space-2c53d6979504[Demystifying Containers]
+
+[%conceal]
+=== Linux Kernel Dependencies
+
+image::https://cdn-media-1.freecodecamp.org/images/1*4hAdaZsw1dptEybpt56VJQ.gif[background, size=contain]
+
+=== Union File System: OverlayFS
+
+* Upper -> Lower
+* Modifications
+** Copy lower -> upper
+* Deletes
+** File: _whiteout_ in OverlayFS
+** Directory: _opaque directory_ in OverlayFS
+
+[%conceal]
+=== UFS
+
+image::https://www.datalight.com/assets/blog-images/OverlayFS_Image.png[background, size=contain]
+
+=== FUSE: LXCFS
+
+* Alternative to Union File System
+* Possible to https://dzone.com/articles/kubernetes-demystified-using-lxcfs-to-improve-cont[deploy] in Kubernetes
+** Debian || CentOS
+** https://github.com/lxc/lxcfs/issues/289[Impossible on Alpine]
+
+=== CGroups
+
+* accounting
+* controlling
+* prioritization
+* resource limiting
+
+https://suckless.org/sucks/systemd/[SystemD: _Best_ example of _suck_]
+
+== Conflicts
+
+=== Conflicts...
+
+* Container != Virtual Machine
+* Container > Application Virtualization
+* Application Virtualization is *now* the problem
+* Anything creating a closely bound architecture abstraction layer
+
+=== Conflicts...
+
+https://play.google.com/music/m/T3mb4rgjkr34cuygokjbih7hbf4?t=My_Old_Friend_-_Country_Karaoke_Cow_Boys[My 'old' friend JAVA]
+
+* OpenJDK / JVM Anything
+** Requires 1 machine per JVM
+** Memory Leak between System & Application layers
+** Pretends the container doesn't exist
+** Hard wired to a specific OS folder structure
+
+=== Conflicts...
+
+* NodeJS... (what!)
+* Ruby
+* Mono
+* C#
+* ...
+
+https://linuxcontainers.org/lxcfs/introduction/[LXCFS] seeks to address these issue.
+
+[.notes]
+--
+* NodeJS fortunately the vast majority of what's done with this language never encounters this issue
+--
+
+== Language Affinity
+
+=== Speed & Memory
+
+1. C/C++
+2. https://dlang.org[D]
+3. https://nim-lang.org/[*Nim*] <= Recommended
+4. https://www.rust-lang.org/[Rust]
+
+https://github.com/frol/completely-unscientific-benchmarks[Unscientific Benchmarks]
+
+[%conceal]
+=== Nirvana cont
+
+image::https://res.cloudinary.com/tayloredtechnology/image/upload/e_bgremoval,q_auto/v1569528876/foggyubiquity.com/language-comparison.jpg[background, size=contain]
+
+=== Shortlist
+
+* Python (https://www.zerynth.com/blog/the-rise-of-python-for-embedded-systems/[Embedded Systems])
+* Nim
+* NodeJS
+* Go (Cloud Only)
+
+=== How to Choose?
+
+* Adopt the RoR style of development (╥﹏╥)
+* Rapid prototype in the language of choice
+* Swap out critical / high throughput parts for Nim as needed
+
+== The Base Container
+
+=== Requirements
+
+* Process Zombie
+* OS Level Health Check
+* Base Image
+* Layer Caching
+
+== Process Zombie
+
+* https://github.com/Yelp/dumb-init#why-you-need-an-init-system[Why You Need an Init System (Yelp)]
+** No Signal Support in your App = Zombie
+* SystemD is basically bloat ware in a container
+* Options:
+** https://github.com/krallin/tini[Tini]
+** https://github.com/Yelp/dumb-init[Dumb-Init]
+** https://skarnet.org/software/execline/dieshdiedie.html[S6] <= Recommended
+
+=== S6: Execline
+
+* Designed for _Embedded Systems_
+* No overhead due to interactive support
+* Occupied resources by Execline are instantly freed after task (irrespective of App execution)
+* Statically compiled, minimal C dependencies
+* Kernel Forking isn't an issue
+* Fastest launch time of any Init Manager (Faster than sh)
+
+https://github.com/just-containers/s6-overlay[JustContainers S6 version]
+
+=== S6: Services
+
+* Notifications
+* onStart
+* onFinish
+* deathTally (ddos prevention)
+
+http://skarnet.org/software/s6/servicedir.html[servicedir]
+
+== OS Level Health Check
+
+* NVMe can timeout!
+** ʕノ•ᴥ•ʔノ ︵ ┻━┻ https://news.ycombinator.com/item?id=17099094[NVMe Update 2018]
+* https://github.com/SimonBaeumer/goss/blob/master/docs/manual.md[Goss] validates everything outside your App
+** Goss provides the 'healthz' endpoint for Kubernetes
+** Separate Kernel branch reduces NodeJS loop overloading
+
+https://www.reddit.com/r/devops/comments/cvlka9/created_a_fork_of_goss_simple_and_easy_server/[Maintainer Update Info]
+
+== Base Image
+
+* *Must* compile on all all Chipsets
+* _Just_
+** Language dependencies
+** Non-Zero User
+** Zombie Manager
+** Other Requirements
+
+== Layer Caching
+
+* *Not* important:
+** Number of Layers... 125 maximum
+* Important:
+** Build Time
+** Startup Time
+** Network Utilization
+** Update Propagation Time
+
+https://grahamc.com/blog/nix-and-layered-docker-images[Graham Christensen]
+
+[%conceal]
+=== Layer Caching...
+
+image::https://res.cloudinary.com/tayloredtechnology/image/upload/e_bgremoval,q_auto/v1568906579/foggyubiquity.com/docker.jpg[background, size=contain]
+
+[%conceal]
+=== Layer Caching...
+
+image::https://res.cloudinary.com/tayloredtechnology/image/upload/e_bgremoval,q_auto/v1568906654/foggyubiquity.com/bash.jpg[background, size=contain]
+
+=== Layer Caching...
+
+* Content addressable
+** *do not* need relationships to eachother
+* DockerFile's are typically written
+** _with relationships between layers in mind_
+** Relationships = Vulnerability?
+
+[%conceal]
+=== Layer Caching...
+
+duplicate nodes in the graph so each node is only pointed to once
+
+image::https://res.cloudinary.com/tayloredtechnology/image/upload/e_bgremoval,q_auto/v1568906205/foggyubiquity.com/bash-weighted-step1.jpg[weighted]
+
+[%conceal]
+=== Layer Caching...
+
+replace each leaf node with a counter, starting at 1
+
+image::https://res.cloudinary.com/tayloredtechnology/image/upload/e_bgremoval,q_auto/v1568906346/foggyubiquity.com/bash-weighted-step2.jpg[leaf nodes]
+
+[%conceal]
+=== Layer Caching...
+
+combine counters with their children, and their children’s counters summed, then incremented
+
+image::https://res.cloudinary.com/tayloredtechnology/image/upload/e_bgremoval,q_auto/v1568906429/foggyubiquity.com/bash-weighted-step3.jpg[combine]
+
+[%conceal]
+=== Layer Caching...
+
+repeat this process until there is only one node & sort by popularity & by name
+
+image::https://res.cloudinary.com/tayloredtechnology/image/upload/e_bgremoval,q_auto/v1568906499/foggyubiquity.com/bash-weighted-step5.jpg[repeat]
+
+== Enter NixOS
+
+"`The Purely Functional Package Manager`" -- https://nixos.org/nixpkgs/manual/[NixPkgs Manual]
+
+( •_•)O* Everything is in the _manual_ °Q(•_• )
+
+=== No-one Reads Manuals...
+
+[%conceal]
+=== NixOS Walkthrough
+
+[source,sh]
+....
+nix search hello
+
+* nixpkgs.hello (hello)
+  A program that produces a familiar, friendly greeting
+....
+
+[%conceal]
+=== NixOS Walkthrough
+
+default.nix
+[source,nix]
+....
+{ pkgs ? import <nixpkgs> {} }:
+
+pkgs.dockerTools.buildLayeredImage {
+  name      = "hello-world";
+  tag       = "latest";
+  contents  = [ pkgs.hello ];
+  config    = ({
+    Entrypoint = ["${pkgs.hello}/bin/hello"];
+  });
+}
+....
+
+[%conceal]
+=== NixOS Walkthrough
+
+[source,sh]
+....
+nix-build
+...
+Finished building layer 'hello-world-granular-docker-layers'
+building '/nix/store/fry4yc2vhas7107yhkjxs9g5z27jli0l-docker-
+  image-hello-world.tar.gz.drv'...
+Cooking the image...
+Finished.
+/nix/store/pj13r1v03rals5jpr4285xw4pgyhir3v-docker-image-
+  hello-world.tar.gz
+
+# symlinked to 'result' in same directory
+....
+
+[%conceal]
+=== NixOS Walkthrough
+
+[source,sh]
+....
+docker load -i result
+
+d51992ba410c: Loading layer 28.73MB/28.73MB
+5eadf85ad725: Loading layer 266.2kB/266.2kB
+359b99fc430e: Loading layer 71.68kB/71.68kB
+fe6663d99767: Loading layer 10.24kB/10.24kB
+59acd48b3d90: Loading layer 10.24kB/10.24kB
+3dc35514b26e: Loading layer 71.68kB/71.68kB
+Loaded image: hello-world:latest
+
+docker run -rm hello-world
+Hello, world!
+....
+
+== Containizen Base Image
+
+* _sotekton/containizen_ https://hub.docker.com/r/sotekton/containizen[DockerHub] || https://github.com/sotekton/containizen[GitHub]
+* NodeJS, Python + pull request...
+* Rebuilt every 24 hours
+* Crafted with NixPkgs Community
+* Extensible via DockerFile / OCI / Nix Build
+* Skarnet S6 Supervision Suite for safe Process Zero+ management
+
+=== Application Code
+
+[source,docker]
+....
+ARG version=nodejs
+FROM sotekton/containizen:$version AS base
+
+COPY . /opt/app
+....
+
+=== Extending
+
+* https://github.com/sotekton/containizen/blob/master/extending/example.nix#L46[Add _additonalPackages_ and tweak settings]
+
+[source,sh]
+....
+nix-build example.nix
+....
+
+=== Most Common Issue
+
+[source,sh]
+....
+# required for some applications
+# i.e. Knex-Migrate
+
+RUN ln -s /bin/env /usr/bin/env
+....
+
