@@ -37,11 +37,6 @@ image::http://www.spiritedbiz.com/wp-content/uploads/2018/04/Denizen_Rum_Merchan
 
 Gradual increase of environmental complexity until it is indistinguishable from actual _production_
 
-1. *Dev*: Development & Test
-2. *HA*: High Availability
-3. *Perf*: Performance
-4. *Prod*: Production
-
 == InfoSec Synergy
 
 === Target State
@@ -57,7 +52,7 @@ Gradual increase of environmental complexity until it is indistinguishable from 
 
 Containers encapsulate the deployment and runtime, and large portion of security requirements of software into an aggregated, common & mostly reproducible environment.
 
-== Why Change?
+== Why Use Containers?
 
 ===  ¯\\_(ツ)_/¯
 
