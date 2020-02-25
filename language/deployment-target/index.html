@@ -7,7 +7,7 @@
     <link rel="canonical" href="http://www.foggyubiquity.com/language/deployment-target/index.html">
     <meta name="description" content="TODO">
     <meta name="keywords" content="microservices, governance, environment, deploymentTarget, operatingEnvironment">
-    <meta name="generator" content="Antora 2.0.0">
+    <meta name="generator" content="Antora 2.2.0">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="stylesheet" href="../../_/css/search.css">
   </head>
@@ -179,7 +179,7 @@
 <h2 id="_reasoning"><a class="anchor" href="#_reasoning"></a>Reasoning</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>… <a href="../../devsecops/continuous-deployment/index.html" class="page"><em>Continuous Deployment</em></a> is about building trust for the <a href="../software-system/index.html" class="page">Software System</a> as a whole, not just the <a href="#">component:index.adoc</a> or <a href="../container/index.html" class="page">Container</a>. In order to do this, a <a href="../software-system/index.html" class="page">Software System</a> progresses through a series of increasing environment complexity or <code>deploymentTarget(s)</code>. Validating the <a href="../software-system/index.html" class="page">Software System</a> is stable within each <code>deploymentTarget</code> risk of business reputation damage reduces and the <a href="../software-system/index.html" class="page">Software System</a> would be manually or automatically promoted to the next <code>deploymentTarget</code>.</p>
+<p>… <a href="../../devsecops/continuous-deployment/index.html" class="page"><em>Continuous Deployment</em></a> is about building trust for the <a href="../software-system/index.html" class="page">Software System</a> as a whole, not just the <a href="#component:index.adoc" class="page unresolved">Component</a> or <a href="../container/index.html" class="page">Container</a>. In order to do this, a <a href="../software-system/index.html" class="page">Software System</a> progresses through a series of increasing environment complexity or <code>deploymentTarget(s)</code>. Validating the <a href="../software-system/index.html" class="page">Software System</a> is stable within each <code>deploymentTarget</code> risk of business reputation damage reduces and the <a href="../software-system/index.html" class="page">Software System</a> would be manually or automatically promoted to the next <code>deploymentTarget</code>.</p>
 </div>
 <div class="paragraph">
 <p>This approach provides a foundational layer for <em>Agnostic</em> infrastructure as the ability to accurately control the environment of <a href="../software-system/index.html" class="page">Software System(s)</a> is critical for multi-cloud / fog success.</p>
@@ -356,7 +356,7 @@
 <p><a href="../container/index.html" class="page">Container(s)</a></p>
 </li>
 <li>
-<p><a href="#">component:index.adoc</a></p>
+<p><a href="#component:index.adoc" class="page unresolved">Component(s)</a></p>
 </li>
 </ul>
 </div>
@@ -372,7 +372,7 @@
 <p>All <code>operatingEnvironment</code> types have provided with default <code>deploymentTarget(s)</code> matching the naming scheme of <code>dev</code>, <code>ha</code>, <code>perf</code>, <code>prod</code>. <em>Cyvive</em> also implements the standard <em>Environment Promotion</em> approach mentioned in the NOTE ensuring rapid adoption of Continuous Deployment for any Organization.</p>
 </div>
 <div class="paragraph">
-<p><a href="http://www.cyvive.io/governance">Cyvive</a> has the technological capability to deploy <a href="../software-system/index.html" class="page">Software System</a>, <a href="../container/index.html" class="page">Container</a> &amp; <a href="#">component:index.adoc</a> in parallel while respecting dependencies.</p>
+<p><a href="http://www.cyvive.io/governance">Cyvive</a> has the technological capability to deploy <a href="../software-system/index.html" class="page">Software System</a>, <a href="../container/index.html" class="page">Container</a> &amp; <a href="#component:index.adoc" class="page unresolved">Component</a> in parallel while respecting dependencies.</p>
 </div>
 <div class="paragraph">
 <p>Additionally, <em>shadow traffic</em> is automatically routed from <strong>prod</strong> into <strong>perf</strong> environment(s) where return values are thrown away to prevent interference with production.</p>
